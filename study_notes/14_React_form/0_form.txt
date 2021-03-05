@@ -1,0 +1,3 @@
+form에 button 태그가 딱 하나만 존재하는 경우, 
+해당 button은 submit 기능을 지닌 것으로 간주됨.
+
