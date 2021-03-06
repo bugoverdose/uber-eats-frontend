@@ -4,7 +4,8 @@ React Hook Form : React에서 form 작업하는 라이브러리. cf) useState만
 useForm의 함수들
 1) register : input의 ref속성의 값으로 설정. 
  : ref={register({required: true})} : 해당 input를 필수로. validation.
- : input 자체의 required 속성도 사용 불필요.
+
+cf) input 태그 자체의 required 속성도 사용 필요. 다만 코드로 뚫을 수 있음. => bypass된 경우를 위해 register의 required 추가 설정 필요.
 
 2) watch : register된 input들에 실시간으로 입력되는 데이터.
         : watch() : 모든 input들에 입력된 데이터들의 객체.
@@ -57,7 +58,7 @@ export const LoggedOutRouter = () => {
             })}
             name="email"
             type="email"
-            required // 불필요.
+            required // html 자체의 필수 조건. 다만 뚫릴 수 있으니 register의 required도 필요.
             placeholder="email"
           />
         </div>
