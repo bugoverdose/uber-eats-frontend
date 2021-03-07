@@ -7,6 +7,11 @@
   
   makeVar(디폴트값) : reacitve variables 생성.
   useReactiveVar : gql문 없이 해당 reacitve variable에 직접 접근 + 업데이트되면 re-render되는 Hook. 
+
+  const isLoggedInVar = makeVar(false); 
+  - isLoggedInVar()처럼 실행해줘야 해당 값에 접근 가능. 
+  - 인자에 값을 대입하면서 실행해줘야 업데이트됨.
+    - 업데이트하려면 export 필요. isLoggedInVar(true)하면 false=>true로 값 업데이트됨.
 */
 // 1) ApolloClient의 cache에 typePolicies 옵션으로 local only field 설정.
 // [apollo.ts]
@@ -43,7 +48,7 @@ function App() {
 export default App;
 
 // ==============================================================
-// 3) reactive variable의 값 업데이트.
+// 3) local state 업데이트 방법 : 특정 reactive variable 호출하여 값 대입.
 // [routers/logged-out-router.tsx]
 import React from "react";
 import { isLoggedInVar } from "../apollo";
