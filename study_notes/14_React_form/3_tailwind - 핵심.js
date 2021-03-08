@@ -1,6 +1,9 @@
 /*
   CTRL+SPACE : Tailwind 자동완성 기능 활성화
 
+  h-screen : 스크린 크기만큼. 각 컴포넌트의 가장 부모인 태그에 최우선 적용. height: 100vh
+  // h-full : 부모 태그의 높이만큼. 내부 태그들에 적용. height 100%.
+
   w-full max-w-lg 
   // width: 100% & max-width: 32rem // 좌우 넓이 반응형 디자인
 
@@ -11,6 +14,8 @@
   // 해당 input이 선택되었을 때 outline 대신 2px짜리 border 색 변경.
 
   hover:opacity-90 bg-gray-800 // 마우스가 위에 있을 때 배경 투명도 변경.
+
+  tracking-wide // 텍스트 간 좌우 간격 적용. 좌우로 넓게.
 */
 
 import React from "react";

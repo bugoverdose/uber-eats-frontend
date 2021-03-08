@@ -46,7 +46,7 @@ export const CreateAccount = () => {
     } = data;
     if (ok) {
       alert("Your Account is Created! Log in now!");
-      history.push("/login"); // login 라우트로 세부 redirection
+      history.push("/"); // login 라우트로 세부 redirection
     }
   }; // onCompleted 옵션: mutation이 백엔드로 성공적으로 보내졌을 때 실행될 함수.
 
@@ -143,10 +143,7 @@ export const CreateAccount = () => {
         </form>
         <div className="mt-5">
           Already have an account?{" "}
-          <Link
-            to="/login"
-            className="font-semibold text-lime-600 hover:underline"
-          >
+          <Link to="/" className="font-semibold text-lime-600 hover:underline">
             Log In
           </Link>
         </div>

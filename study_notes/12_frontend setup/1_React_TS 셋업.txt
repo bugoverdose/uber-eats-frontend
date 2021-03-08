@@ -5,6 +5,15 @@
 // npm init & git init 불필요
 
 npm run start
+=====================================================================
+[React - fontawesome 셋업] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+
+npm i --save @fortawesome/fontawesome-svg-core      
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+// npm install --save @fortawesome/free-brands-svg-icons    // 깃헙 로고 등 추가 사용 목적.
+// npm install --save @fortawesome/free-regular-svg-icons
 
 =====================================================================
 [Router - TS 셋업]

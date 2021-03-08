@@ -9,9 +9,9 @@ import {
   LoginMutation,
   LoginMutationVariables,
 } from "../generated_api_types/LoginMutation";
-import uberLogo from "../images/uber-eats-logo.svg";
 import { authTokenVar, isLoggedInVar } from "../apollo";
 import { LOCALSTORAGE_TOKEN } from "../constants";
+import { LogoImg } from "../components/logo";
 
 const LOGIN_MUTATION = gql`
   mutation LoginMutation($loginInput: LoginInputDto!) {
@@ -78,7 +78,7 @@ export const Login = () => {
         <title>Login | Uber Eats</title>
       </Helmet>
       <div className="w-full max-w-screen-sm flex flex-col items-center px-5">
-        <img src={uberLogo} alt="Uber Eats" className="w-52 mb-10" />
+        <LogoImg css="w-52 mb-10" />
         <h4 className="w-full font-semibold text-2xl">Welcome Back</h4>
         <form
           onSubmit={handleSubmit(onValidSubmit)}
