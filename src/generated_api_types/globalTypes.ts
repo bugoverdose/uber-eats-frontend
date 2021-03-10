@@ -19,9 +19,18 @@ export interface CreateAccountInputDto {
   role: UserRole;
 }
 
+export interface EditProfileInputDto {
+  email?: string | null;
+  password?: string | null;
+}
+
 export interface LoginInputDto {
   email: string;
   password: string;
+}
+
+export interface VerifyEmailInputDto {
+  code: string;
 }
 
 //==============================================================

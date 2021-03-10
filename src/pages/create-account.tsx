@@ -56,7 +56,7 @@ export const CreateAccount = () => {
 
   const [
     CreateAccountMutation,
-    { loading, data: createAccountMutationResult },
+    { loading: loadingMutation, data: createAccountMutationResult },
   ] = useMutation<CreateAccountMutation, CreateAccountMutationVariables>(
     CREATE_ACCOUNT_MUTATION,
     {
@@ -66,7 +66,7 @@ export const CreateAccount = () => {
   ); // 제네릭은 DTO 기준 type validation 목적. (dto => schema => codegen types)
 
   const onValidSubmit = () => {
-    if (!loading) {
+    if (!loadingMutation) {
       const { email, password, role } = getValues(); // 모든 validation을 통과하여 submit된 입력값들.
       CreateAccountMutation({
         variables: {
@@ -132,7 +132,7 @@ export const CreateAccount = () => {
           </select>
           <FormButton
             canClick={formState.isValid}
-            loading={loading}
+            loading={loadingMutation}
             actionText={"Create Account"}
           />
           {createAccountMutationResult?.createAccount.error && (

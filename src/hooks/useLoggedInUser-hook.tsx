@@ -10,7 +10,7 @@ const LOGGED_IN_USER_QUERY = gql`
       emailVerified
     }
   }
-`;
+`; // 중요: id 필드가 있어야 writeFragment로 접근하여 수정 가능
 
 export const useLoggedInUser = () =>
   useQuery<loggedInUserQuery>(LOGGED_IN_USER_QUERY);

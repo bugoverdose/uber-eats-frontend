@@ -94,7 +94,7 @@ export const Login = () => {
             placeholder="Email"
             name="email"
             required
-            className="capsule-input "
+            className="capsule-input"
           />
           {errors?.email?.message && (
             <FormError errorMessage={errors?.email?.message} />
