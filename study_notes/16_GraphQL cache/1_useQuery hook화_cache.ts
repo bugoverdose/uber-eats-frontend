@@ -1,13 +1,13 @@
 /*
   컴포넌트 사이에 prop으로 query 실행 결과를 전달하는 것에 비해, 
-  모든 컴포넌트에 hook을 설정해놓으면 성능 저하X. 코드 중복만 감소.
+  모든 컴포넌트에서 useQuery를 사용하는 hook을 설정하면 성능 저하X. 코드 중복만 감소.
 
- const { data, loading, error } = useQuery<output타입들>(gql문);
- => 해당 작업을 hook으로 만들어서 다양한 곳에서 재활용.
+  const { data, loading, error } = useQuery<output타입들>(gql문);
+  => 해당 작업을 hook으로 만들어서 다양한 곳에서 재활용.
 
- 장점: 해당 query의 실행 결과가 cache에 이미 존재하는 경우 재요청X.
-       => 즉, 같은 route에서 여러 컴포넌트에서 해당 hook을 활용하더라도,
-          해당 query는 단 한번만 요청됨.
+ useQuery 특징: 해당 query의 실행 결과가 cache에 이미 존재하는 경우 재요청X.
+              : 같은 route에서 복수의 컴포넌트가 같은 useQuery(gql``)를
+                동시에 실행하는 경우 해당 query는 최초 단 한번만 요청됨. 
 */
 // [hooks/useLoggedInUser-hook.tsx]
 import { gql, useQuery } from "@apollo/client";

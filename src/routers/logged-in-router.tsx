@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Header } from "../components/header";
 import { useLoggedInUser } from "../hooks/useLoggedInUser-hook";
-import { NotFound } from "./404";
-import { Restaurants } from "./client/restaurants";
-import { ConfirmEmail } from "./user/confirm-email";
-import { EditProfile } from "./user/edit-profile";
+import { NotFound } from "../pages/404";
+import { Restaurants } from "../pages/client/restaurants";
+import { ConfirmEmail } from "../pages/user/confirm-email";
+import { EditProfile } from "../pages/user/edit-profile";
 
 const ClientRoutes = [
   <Route key={1} path="/" exact>

@@ -55,7 +55,7 @@ export const CreateAccount = () => {
   }; // 전혀 예상 못한 상황들. mutation이 제대로 보내지지 않았을 때.
 
   const [
-    CreateAccountMutation,
+    createAccountMutation,
     { loading: loadingMutation, data: createAccountMutationResult },
   ] = useMutation<CreateAccountMutation, CreateAccountMutationVariables>(
     CREATE_ACCOUNT_MUTATION,
@@ -68,7 +68,7 @@ export const CreateAccount = () => {
   const onValidSubmit = () => {
     if (!loadingMutation) {
       const { email, password, role } = getValues(); // 모든 validation을 통과하여 submit된 입력값들.
-      CreateAccountMutation({
+      createAccountMutation({
         variables: {
           createAccountInput: { email, password, role },
         },

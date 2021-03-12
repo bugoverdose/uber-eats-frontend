@@ -13,6 +13,22 @@
 
   https://www.apollographql.com/docs/react/caching/cache-interaction/
 */
+// writeFragment 형식
+const client = useApolloClient();
+client.writeFragment({
+  id: `UserEntity:${userData.loggedInUser.id}`, // 캐쉬id: UserEntity:2
+  fragment: gql`
+    fragment VerifiedUser on UserEntity {
+      emailVerified
+    }
+  `, // fragment의 타입은 'UserEntity' (F12 > Apollo > Cache 참고).
+  // fragment VerifiedUser on의 VerifiedUser는 값 자유 지정.  
+  data: {
+    emailVerified: true,
+  }, // UserEntity.emailVerified 필드의 값을 선택하여 값 수정.
+});
+
+// =======================================================================
 const LOGGED_IN_USER_QUERY = gql`
   query loggedInUserQuery {
     loggedInUser {

@@ -10,13 +10,15 @@ export const Header: React.FC = () => {
   return (
     <>
       {!data?.loggedInUser.emailVerified && (
-        <div className="bg-red-500 p-3 text-center text-sm text-white font-semibold">
+        <div className="bg-red-500 p-3 text-center text-base text-white font-semibold">
           <span>Please verify your email.</span>
         </div>
       )}
       <header className="py-4">
-        <div className="px-5 xl:px-0 w-full max-w-screen-lg mx-auto flex justify-between items-center">
-          <LogoImg css="w-24" />
+        <div className="capsule-container-width flex justify-between items-center">
+          <Link to="/">
+            <LogoImg css="w-24" />
+          </Link>
           <Link to="/edit-profile">
             <FontAwesomeIcon icon={faUser} className="text-xl" />
           </Link>

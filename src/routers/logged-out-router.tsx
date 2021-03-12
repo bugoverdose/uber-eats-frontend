@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; // HashRouter는 url에 #가 보이지만 배포하기는 더 쉬움.
 import { CreateAccount } from "../pages/create-account";
 import { Login } from "../pages/login";
-import { NotFound } from "./404";
+import { NotFound } from "../pages/404";
 
 export const LoggedOutRouter = () => {
   return (
