@@ -1,6 +1,6 @@
 module.exports = {
   client: {
-    includes: ["./src/**/*.tsx"], // src 폴더 내부의 모든 폴더들의 .tsx 파일들 찾기. 폴더 내부의 폴더들도 다 찾음.
+    includes: ["./src/**/*.{tsx,ts}"], // src 폴더 내부의 모든 폴더들의 .tsx/.ts 파일들 찾기. 폴더 내부의 폴더들도 다 찾음.
     tagName: "gql", // gql`` 형식의 graphql문들을 대상으로 함.
     service: {
       name: "uber-eats-backend", // 이름은 자유 지정.

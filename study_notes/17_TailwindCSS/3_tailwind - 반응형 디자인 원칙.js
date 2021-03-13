@@ -26,3 +26,7 @@ export const Header = () => (
     <div className="w-full max-w-screen-lg mx-auto bg-blue-300">Header</div>
   </header>
 );
+
+
+// 작은 화면에서는 1열로. 큰 화면에서는 3열로 정렬.
+<div className="grid md:grid-cols-3 gap-x-5 gap-y-8 mt-5">

@@ -1,4 +1,4 @@
-// 1) 현재 url의 parameter 부분(?code=~~)만 읽는 방법.
+// 현재 url의 parameter 부분(?code=~~)만 읽는 방법.
 import { useLocation } from "react-router";
 
 function useQueryParam() {
